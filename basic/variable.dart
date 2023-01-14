@@ -4,7 +4,7 @@ void main() {
   double var_double = 1.25;
   bool var_bool = true;
   Map var_map = {"number": 1, "say": "one"};
-  List var_list = [1, 2];
+  List<int> var_list = [1, 2];
 
   print(var_string);
   print(var_int);
