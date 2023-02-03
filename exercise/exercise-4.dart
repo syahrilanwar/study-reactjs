@@ -1,22 +1,15 @@
-// write a program that returns a list that contains
-// only the elements that are common between them
-// (without duplicates). Make sure your program
-// works on two lists of different sizes.
+// Create a program that asks the user 
+// for a number and then prints out 
+// a list of all the divisors of that number.
+
+import 'dart:io';
 
 void main() {
-  List<int> a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
-  List<int> b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 89];
-  Set<int> c = {};
-
-  for (var i in a) {
-    for (var j in b) {
-      if (i == j) {
-        c.add(i);
-      }
+  stdout.write("Please choose a number: ");
+  int number = int.parse(stdin.readLineSync()!);
+  for (var i = 1; i <= number; i++) {
+    if (number % i == 0) {
+      print(i);
     }
   }
-  print(c.toList());
-
-  // One liner using set intersections
-  print(Set.from(a).intersection(Set.from(b)).toList());
 }
