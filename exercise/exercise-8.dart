@@ -25,7 +25,7 @@ void main() {
   while (true) {
     String compChoice = options[random.nextInt(options.length)];
     stdout.write("\nPlease choose Rock, Paper or Scissors: ");
-    String userChoice = stdin.readLineSync().toLowerCase();
+    String userChoice = stdin.readLineSync()?.toLowerCase();
 
     if (userChoice == "exit") {
       print("\nYou: $user Computer: $comp\nBye Bye!");
